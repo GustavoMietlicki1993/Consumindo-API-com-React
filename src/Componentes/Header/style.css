@@ -7,6 +7,17 @@ header#main-header{
     color:#fff;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
+}
+header#main-header .home a{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+header#main-header a:hover{
+    color: #cf8571;    
 }

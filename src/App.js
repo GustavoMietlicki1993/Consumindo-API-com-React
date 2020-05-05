@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import Routes from './routes';
 
 import './styles.css';
 
-import Header from './Componentes/Header';
-import Main from './pages/main';
+const Header = lazy(() => import('./Componentes/Header'));
 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Suspense fallback={
+          <div>
+            <span className="sr-only">Loading...</span>
+          </div>
+        }>
 
-const App = () => (
-  <div className="App">
-    <Header />
-    <Routes />
-  </div>
-)
+          <Header />
+        </Suspense>
+        <Routes />
+      </div>
+    );
+  }
+}
 export default App;

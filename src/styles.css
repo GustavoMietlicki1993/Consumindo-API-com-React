@@ -4,6 +4,10 @@
     outline: 0;
     box-sizing: border-box;
 }
+.load{
+    justify-content: center;
+    color: aquamarine;
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fafafa;
